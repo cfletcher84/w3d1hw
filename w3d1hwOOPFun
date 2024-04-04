@@ -1,0 +1,51 @@
+class Vehicle:
+    def __init__(self, reg_num, model, owner):
+        self.reg_numb = reg_num
+        self.model = model
+        self.owner = owner
+
+    def update_owner(self):
+        user_input = input('\nWho would you like to change ownership to? : ')
+        self.owner = user_input
+
+honda = Vehicle(123, 'accord', 'chris')
+mazda = Vehicle(1243, '3', 'ryan')
+
+honda.update_owner()
+print(f'The new owner of the {honda.model} is {honda.owner}')
+
+
+mazda.update_owner()
+print(f'The new owner of the {mazda.model} is {mazda.owner}')
+
+name = input('What is the name of the new participant? : ')
+date = input('\nWhat date is the new partcipant attending? : (MM/DD/YYYY) ')
+
+self.participants = {}
+
+class Event:
+    
+    def __init__(self, name, date):
+        self.name = name
+        self.date = date
+        self.participants = {}
+        self.participant_count = 0
+
+
+    def add_participant(self):
+        # self.name = name
+        # self.date = date
+        
+        name = input('What is the name of the new participant? : ')
+        date = input('\nWhat date is the new partcipant attending? : (MM/DD/YYYY) ')
+        self.participants[name] = date
+        self.participant_count += 1
+
+participant = Event('tattoo convention', '01/01/2024')
+
+participant.add_participant()
+participant.add_participant()
+participant.add_participant()
+
+print(participant.participants)
+print(participant.participant_count)
